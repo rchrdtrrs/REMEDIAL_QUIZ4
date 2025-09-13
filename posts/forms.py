@@ -9,3 +9,4 @@ class PostForm(forms.ModelForm):
             'content': forms.Textarea(attrs={'class': 'form-control', 'rows': 3}),
             'image': forms.FileInput(attrs={'class': 'form-control'})
         }
+

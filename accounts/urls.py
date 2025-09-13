@@ -8,3 +8,4 @@ urlpatterns = [
     path('profile/', profile_view, name='profile_view'),
     path('profile/create/', profile_create_view, name='profile_create'), #remove
 ]
+

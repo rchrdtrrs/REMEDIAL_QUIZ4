@@ -21,8 +21,8 @@
         <div class="col-lg-8">
             <form method="get" action="{% url 'jobs:job_list_view' %}">
                 <div class="input-group shadow-sm">
-                    <input type="text" name="q" class="form-control border-end-0" 
-                           placeholder="Search jobs by title, description, or location..." 
+                    <input type="text" name="q" class="form-control border-end-0"
+                           placeholder="Search jobs by title, description, or location..."
                            value="{{ request.GET.q }}"
                            aria-label="Search jobs">
                     <button class="btn btn-primary" type="submit">
@@ -67,7 +67,7 @@
                                         <p class="card-text" style="height: 4.5em; overflow: hidden;">
                                             {{ job.job_description|truncatechars:120 }}
                                         </p>
-                                        
+
                                         <!-- Job Metadata -->
                                         <div class="d-flex flex-wrap gap-2 mt-3">
                                             <span class="badge bg-success bg-opacity-10 text-success">
@@ -87,19 +87,19 @@
 
                                 {% if request.user.is_staff %}
                                     <div class="dropdown position-absolute top-0 end-0 mt-2 me-2" style="z-index: 100;">
-                                        <button class="btn btn-light btn-sm rounded-circle shadow-sm" type="button" 
+                                        <button class="btn btn-light btn-sm rounded-circle shadow-sm" type="button"
                                                 data-bs-toggle="dropdown" aria-expanded="false"
                                                 onclick="event.preventDefault();">
                                             <i class="bi bi-three-dots"></i>
                                         </button>
                                         <ul class="dropdown-menu dropdown-menu-end shadow-sm">
-                                            <li><a class="dropdown-item d-flex align-items-center" 
+                                            <li><a class="dropdown-item d-flex align-items-center"
                                                    href="{% url 'jobs:job_update_view' pk=job.id %}"
                                                    onclick="event.preventDefault(); window.location.href=this.href;">
                                                 <i class="bi bi-pencil me-2"></i> Edit
                                             </a></li>
                                             <li><hr class="dropdown-divider"></li>
-                                            <li><a class="dropdown-item d-flex align-items-center text-danger" 
+                                            <li><a class="dropdown-item d-flex align-items-center text-danger"
                                                    href="{% url 'jobs:job_delete_view' pk=job.id %}"
                                                    onclick="event.preventDefault(); window.location.href=this.href;">
                                                 <i class="bi bi-trash me-2"></i> Delete

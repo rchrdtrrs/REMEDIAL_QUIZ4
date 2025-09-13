@@ -13,3 +13,4 @@ urlpatterns = [
     path('<int:pk>/apply/', job_apply, name='job_apply'),
 
 ]
+
